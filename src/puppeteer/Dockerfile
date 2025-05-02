@@ -16,10 +16,10 @@ RUN apt-get update && \
     apt-get install -y chromium && \
     apt-get clean
 
-COPY src/puppeteer /project
-COPY tsconfig.json /tsconfig.json
+COPY . /app
+#COPY tsconfig.json /tsconfig.json
 
-WORKDIR /project
+WORKDIR /app
 
 RUN npm install
 

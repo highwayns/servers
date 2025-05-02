@@ -1,7 +1,7 @@
 FROM node:22.12-alpine AS builder
 
-COPY src/aws-kb-retrieval-server /app
-COPY tsconfig.json /tsconfig.json
+COPY . /app
+#COPY ../../tsconfig.json /app/tsconfig.base.json
 
 WORKDIR /app
 
